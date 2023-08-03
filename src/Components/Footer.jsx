@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { modoContext } from '../Context/modoContext'
 
 function Footer() {
+  const {claseModo} = useContext(modoContext)
+
   return (
-    <div className='bg-gray-200 text-black py-4 w-full'>
-      <p>Todos los derechos reservados © {new Date().getFullYear()}</p></div>
+    <div className='fixed bottom-0 w-full'>
+
+    <div className={claseModo}>
+
+      <p className='text-center'>Todos los derechos reservados © {new Date().getFullYear()}</p>
+      
+      </div>
+    </div>
   )
 }
 
