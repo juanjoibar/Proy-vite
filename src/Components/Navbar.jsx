@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { modoContext } from "../Context/modoContext";
+import { Link } from "react-router-dom";
 function Navbar({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,15 +27,15 @@ function Navbar({ children }) {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link  to='/' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Inicio
-                </a>
-                <a href="#" className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                </Link >
+                <Link  to='/' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Productos
-                </a>
-                <a href="#" className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                </Link >
+                <Link  to='/contacto' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Contacto
-                </a>
+                </Link >
               </div>
             </div>
           </div>
@@ -52,15 +53,15 @@ function Navbar({ children }) {
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 sm:px-3">
-          <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          <Link to='/' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Inicio
-          </a>
-          <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          </Link>
+          <Link to='/productos' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Productos
-          </a>
-          <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+          </Link>
+          <Link to='/contacto' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Contacto
-          </a>
+          </Link>
         </div>
       </div>
         </nav>

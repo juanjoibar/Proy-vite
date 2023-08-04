@@ -1,21 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './Components/Navbar'
-import Footer from './Components/Footer'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import StateCombo from './Context/StateCombo'
+import Inicio from './Components/Inicio'
+import Contacto from './Components/Contacto'
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
 
-      <StateCombo>
-      <Navbar/>
-      <div className='bg-blue-500 p-4'>Vamos a usar React</div>
-      <Footer/>
-      </StateCombo>
+       <StateCombo>
+       <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Inicio/>}  ></Route>
+          <Route path='/productos/:productoid' element={<Inicio/>} />
+          <Route path="/contacto" element={<Contacto/>}  ></Route>
+        </Routes>
+      </BrowserRouter>
+
+        
+       </StateCombo>
     </>
   )
 }
