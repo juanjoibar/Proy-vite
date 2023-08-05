@@ -38,6 +38,9 @@ function Navbar({ children }) {
                 <Link  to='/contacto' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Contacto
                 </Link >
+                <Link  to='/login' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Login
+                </Link >
               </div>
             </div>
           </div>
