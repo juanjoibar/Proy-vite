@@ -19,6 +19,9 @@ function Contacto() {
 
       <>
       <Navbar/>
+      <div className='bg-blue-500 p-4 mt-20'>
+
+      </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold mb-4">Contacto</h2>
         <div className="form-group mb-4 px-3">

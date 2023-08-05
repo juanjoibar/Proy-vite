@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import StateCombo from './Context/StateCombo'
 import Inicio from './Components/Inicio'
 import Contacto from './Components/Contacto'
+import Productos from './Components/productos/Productos'
 function App() {
 
 
@@ -13,7 +14,7 @@ function App() {
        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Inicio/>}  ></Route>
-          <Route path='/productos/:productoid' element={<Inicio/>} />
+          <Route path="/productos" element={<Productos/>} ></Route>
           <Route path="/contacto" element={<Contacto/>}  ></Route>
         </Routes>
       </BrowserRouter>
