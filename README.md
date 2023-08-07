@@ -9,20 +9,19 @@
 2. navbar
 3. contacto
 4. context 
-5. modo claro y oscuro. 
-
-
+5. Modo claro y oscuro. 
+6. Agregar carrito de compras.
+7. Crear login.
+8. formulario de registro.
 
 ##Falta 
-1. traer lista de productos resposive
+1. traer lista de productos resposive casi 
 2. mejorar el carousel
-3. buscar buena api y enmarcar fotos de productos
-4. ver de agregar carrito de compras.
+3. buscar buena api y enmarcar fotos de productos casi pero no pagina
+4. usar firebase para el login.
 5. check out del carrito.
-6. Crear login.
-7. formulario de registro.
-8. usar localhost. 
-9. armar pago con pago con mercadolibre si es posible. 
+6. usar localhost. 
+7. armar pago con pago con mercadolibre si es posible. 
 
 
 

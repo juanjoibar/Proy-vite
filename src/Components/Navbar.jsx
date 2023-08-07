@@ -41,6 +41,9 @@ function Navbar({ children }) {
                 <Link  to='/login' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Login
                 </Link >
+                <Link  to='/checkout' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  🛒
+                </Link >
               </div>
             </div>
           </div>
@@ -67,6 +70,12 @@ function Navbar({ children }) {
           <Link to='/contacto' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Contacto
           </Link>
+          <Link  to='/login' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Login
+                </Link >
+                <Link  to='/checkout' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  🛒
+                </Link >
         </div>
       </div>
         </nav>
