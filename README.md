@@ -13,6 +13,7 @@
 6. Agregar carrito de compras.
 7. Crear login.
 8. formulario de registro.
+9. Localhost para el modo claro/oscuro
 
 ##Falta 
 1. traer lista de productos resposive casi 
@@ -20,8 +21,10 @@
 3. buscar buena api y enmarcar fotos de productos casi pero no pagina
 4. usar firebase para el login.
 5. check out del carrito.
-6. usar localhost. 
+6. usar localhost para el checkout. 
 7. armar pago con pago con mercadolibre si es posible. 
+8. Al seleccionar el produccto ver mas detalles. 
+
 
 
 

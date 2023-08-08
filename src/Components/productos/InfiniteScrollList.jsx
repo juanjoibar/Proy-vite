@@ -66,7 +66,9 @@ const InfiniteScrollList = () => {
            <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={item.image} alt=""/>
            <div className="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}1</h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description}</p>
+        <h6 class="mb-2 text-l font-bold tracking-tight text-gray-900 dark:text-white">Categoria: {item.category}1</h6>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Price:${item.price}</p>
+        {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.description}</p> */}
         <button className='rounded-full bg-slate-300'>agregar🛒</button>
         </div>
       </div>
