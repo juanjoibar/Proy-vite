@@ -10,7 +10,9 @@ function Navbar({ children }) {
 
   const { modo, cambiar, claseModo } = useContext(modoContext);
   return (
+    <div className="fixed top-0 z-10 w-full">
     <header className={claseModo}>
+
       <div className="container mx-auto flex items-center justify-between">
         <a href="#" className=" text-xl font-bold">
           Mi Sitio de Pesca
@@ -30,11 +32,17 @@ function Navbar({ children }) {
                 <Link  to='/' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Inicio
                 </Link >
-                <Link  to='/' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link  to='/productos' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Productos
                 </Link >
                 <Link  to='/contacto' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Contacto
+                </Link >
+                <Link  to='/login' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Login
+                </Link >
+                <Link  to='/checkout' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  🛒
                 </Link >
               </div>
             </div>
@@ -62,6 +70,12 @@ function Navbar({ children }) {
           <Link to='/contacto' className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
             Contacto
           </Link>
+          <Link  to='/login' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  Login
+                </Link >
+                <Link  to='/checkout' className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  🛒
+                </Link >
         </div>
       </div>
         </nav>
@@ -69,6 +83,7 @@ function Navbar({ children }) {
    
       
     </header>
+      </div>
   );
 }
 
