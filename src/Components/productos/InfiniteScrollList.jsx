@@ -57,7 +57,7 @@ const InfiniteScrollList = () => {
   };
 
   return (
-    <div className='mt-40'>
+    <div className='mt-20'>
       <ul className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 '>
         {items.map((item) => (
           <li className='flex ' key={item.id}>

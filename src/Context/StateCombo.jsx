@@ -52,13 +52,20 @@ const  StateCombo = ({children}) => {
     setCartItems([]);
   };
 
-
+  /**** el context para el manejo del usuario  ***** */
+  
+  const initialCredential = JSON.parse(localStorage.getItem('userCredential')) || null;
+  const [userCredential, setUserCredential] = useState(initialCredential);
+  useEffect(() => {
+    localStorage.setItem('userCredential', JSON.stringify(userCredential));
+   
+  }, [userCredential]);
 
   /**** la exportacion del context con variables y funciones  ***** */
 
   return (
     
-      <modoContext.Provider value={{modo,cambiar,claseModo}}>
+      <modoContext.Provider value={{modo,cambiar,claseModo ,userCredential,setUserCredential}}>
         {children}
       </modoContext.Provider>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 
 const images = [
   'https://images.dog.ceo/breeds/retriever-golden/n02099601_67.jpg',
@@ -19,21 +19,38 @@ function Carousel() {
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
     };
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 10000);
+      return () => clearInterval(interval);
+    }, [currentIndex]);
  
     return (
-      <div className="m-8 md:m-4 lg:m-16">
-        <div className="relative ">
-        <img src={images[currentIndex]} alt={`Image ${currentIndex}`} className="w-full h-auto" />
-        <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between">
-          <button onClick={prevSlide} className="text-white text-2xl px-4 py-2 bg-black opacity-50 hover:opacity-75">
+      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full h-80 sm:h-96 md:h-120 lg:h-160 xl:h-200">
+        <img
+          src={images[currentIndex]}
+          alt={`Image ${currentIndex}`}
+          className="absolute w-full h-full object-cover transition-opacity duration-500 ease-in-out"
+        />
+        <div className="absolute inset-0 flex items-center justify-between">
+          <button
+            onClick={prevSlide}
+            className="text-white text-3xl px-4 py-2 bg-black bg-opacity-50 hover:bg-opacity-75"
+          >
             &lt;
           </button>
-          <button onClick={nextSlide} className="text-white text-2xl px-4 py-2 bg-black opacity-50 hover:opacity-75">
+          <button
+            onClick={nextSlide}
+            className="text-white text-3xl px-4 py-2 bg-black bg-opacity-50 hover:bg-opacity-75"
+          >
             &gt;
           </button>
         </div>
       </div>
-      </div>
+    </div>
   )
 }
 
