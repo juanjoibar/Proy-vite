@@ -4,8 +4,10 @@ import { modoContext } from "../../Context/modoContext";
 
 const CartIcon = ({ children }) => {
   const { cartItems } = useContext(modoContext);
-
-  const cartItemCount =  4//  cartItems.quantity; 
+  const cantidadTotal = cartItems.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
+  const cartItemCount =  cantidadTotal;//  cartItems.quantity; 
   return (
     <div className="relative inline-block">
       <Link

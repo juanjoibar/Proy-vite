@@ -44,9 +44,11 @@ const  StateCombo = ({children}) => {
   };
 
   const removeFromCart = (item) => {
+    console.log(item.id);
     const updatedCart = cartItems.map((cartItem) =>
       cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity - 1 } : cartItem
     ).filter((cartItem) => cartItem.quantity > 0);
+    console.log(updatedCart);
     setCartItems(updatedCart);
   };
   const clearCart = () => {
@@ -71,7 +73,7 @@ const  StateCombo = ({children}) => {
 
   return (
     
-      <modoContext.Provider value={{modo,cambiar,claseModo ,userCredential,setUserCredential ,addToCart , cartItems ,removeFromCart  }}>
+      <modoContext.Provider value={{modo,cambiar,claseModo ,userCredential,setUserCredential ,addToCart , cartItems ,removeFromCart ,clearCart }}>
         {children}
       </modoContext.Provider>
   )
