@@ -5,11 +5,11 @@ function Footer() {
   const {claseModo} = useContext(modoContext)
 
   return (
-    <div className='fixed bottom-0 w-full'>
+    <div className='fixed bottom-0 w-full '>
 
     <div className={claseModo}>
 
-      <p className='text-center'>Todos los derechos reservados © {new Date().getFullYear()}</p>
+      <p className=' text-center p-1'>Todos los derechos reservados © {new Date().getFullYear()}</p>
       
       </div>
     </div>

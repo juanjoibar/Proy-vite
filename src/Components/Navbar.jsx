@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { modoContext } from "../Context/modoContext";
 import { Link } from "react-router-dom";
+import CartIcon from "./general/CartIcon"
 function Navbar({ children }) {
   const { modo, cambiar, claseModo , userCredential } = useContext(modoContext);
   
@@ -61,12 +62,7 @@ function Navbar({ children }) {
                       >
                         Login
                       </Link>
-                      <Link
-                        to="/checkout"
-                        className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                      >
-                        🛒
-                      </Link>
+                      <CartIcon/>
                     </div>
                   </div>
                 </div>
@@ -133,12 +129,7 @@ function Navbar({ children }) {
                 >
                   Login
                 </Link>
-                <Link
-                  to="/checkout"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  🛒
-                </Link>
+              <CartIcon/>
               </div>
             </div>
           </nav>

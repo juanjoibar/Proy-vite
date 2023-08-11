@@ -1,7 +1,7 @@
 // src/components/Checkout.js
 import React, { useState } from 'react';
 
-const Checkout = () => {
+const Checkout = ( ) => {
   const [cartItems, setCartItems] = useState([
     { id: 1, name: 'Producto 1', price: 10, quantity: 2 },
     { id: 2, name: 'Producto 2', price: 20, quantity: 3 },
@@ -25,13 +25,13 @@ const Checkout = () => {
   };
 
   return (
-    <div className='mt-20'>
+    <div className='mt-20 mb-5'>
 
-    <div className="mt-10 mx-auto w-96 p-4 rounded-lg shadow-lg bg-white">
+    <div className="mt-10 mx-auto w-96 p-2 rounded-lg shadow-lg bg-white">
     <h2 className="text-2xl font-semibold mb-4">Checkout</h2>
     <ul className="space-y-4">
       {cartItems.map(item => (
-        <li key={item.id} className="flex items-center justify-between border p-4 rounded-lg">
+        <li key={item.id} className="flex items-center justify-between border p-2 rounded-lg">
           <div className="flex items-center">
             <p className="font-semibold mr-2">{item.name}</p>
             <button onClick={() => handleDecrement(item.id)} className="border border-blue-500 bg-blue-500 text-white rounded-md px-1 py-1 m-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline">-</button>
@@ -45,7 +45,7 @@ const Checkout = () => {
         </li>
       ))}
     </ul>
-    <div className="mt-4 text-lg font-semibold">
+    <div className="mb-8 text-lg font-semibold">
       Total: <span className="text-blue-600">${calculateTotalPrice()}</span>
     </div>
   </div>

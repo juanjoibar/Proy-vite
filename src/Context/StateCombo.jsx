@@ -6,7 +6,7 @@ const  StateCombo = ({children}) => {
   /**** el context para el manejo del modo oscuro y modo claro  ***** */
   
     const initialModo = JSON.parse(localStorage.getItem('modo')) || 'light☀';
-    const initialClaseModo = JSON.parse(localStorage.getItem('claseModo')) || 'bg-gray-200 text-black py-4 w-full';
+    const initialClaseModo = JSON.parse(localStorage.getItem('claseModo')) || 'bg-gray-200 text-black py-2 w-full';
     const [modo,setModo]= useState(initialModo)
     const [claseModo,setClaseModo] = useState(initialClaseModo)
     
@@ -27,8 +27,9 @@ const  StateCombo = ({children}) => {
 
 
   /**** el context para el manejo del carrito  ***** */
+  const initialCart = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(initialCart);
 
   const addToCart = (item) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -52,6 +53,11 @@ const  StateCombo = ({children}) => {
     setCartItems([]);
   };
 
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+  }, [cartItems]);
+
   /**** el context para el manejo del usuario  ***** */
   
   const initialCredential = JSON.parse(localStorage.getItem('userCredential')) || null;
@@ -65,7 +71,7 @@ const  StateCombo = ({children}) => {
 
   return (
     
-      <modoContext.Provider value={{modo,cambiar,claseModo ,userCredential,setUserCredential}}>
+      <modoContext.Provider value={{modo,cambiar,claseModo ,userCredential,setUserCredential ,addToCart , cartItems ,removeFromCart  }}>
         {children}
       </modoContext.Provider>
   )
