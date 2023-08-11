@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 import { modoContext } from "../../Context/modoContext";
 const Checkout = ( {children}) => {
 
-  const { cartItems ,removeFromCart,addToCart ,clearCart} = useContext(modoContext);
+  const { cartItems ,removeFromCart,addToCart ,clearCart,removeitemFromCart} = useContext(modoContext);
 
 
 
@@ -12,7 +12,8 @@ const Checkout = ( {children}) => {
   };
 
   const handleRemoveItem = (item) => {
-    clearCart(item)
+    removeitemFromCart(item);
+    //clearCart(item)
     //setCartItems(cartItems.filter(item => item.id !== itemId));
   };
 
@@ -52,6 +53,7 @@ const Checkout = ( {children}) => {
     </ul>
     <div className="mb-8 text-lg font-semibold">
       Total: <span className="text-blue-600">${calculateTotalPrice()}</span>
+      {/* <button onClick={handleRemoveItem()} className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">🗑Vaciar</button> */}
     </div>
   </div>
           </div>
