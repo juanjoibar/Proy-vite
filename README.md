@@ -35,4 +35,6 @@
 
 *
 ##sitio
-* [Sitio en desarrollo](pescaenlinea.netlify.app) 
+* [Sitio en desarrollo](https://pescaenlinea.netlify.app) 
+
+* [Deepnote](https://www.deepnote.com)
