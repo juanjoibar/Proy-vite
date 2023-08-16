@@ -7,7 +7,8 @@ function FormLogin({ children }) {
   const { setUserCredential} = useContext(modoContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [errorlogin, setErrorLogin] = useState("");
+   
   const handleSubmit = (e) => {
     e.preventDefault();
     // Aquí puedes agregar la lógica para autenticar al usuario, por ejemplo, hacer una petición a un servidor.
@@ -27,7 +28,7 @@ function FormLogin({ children }) {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log('tira error'+error);
+        setErrorLogin('tira error'+error);
       });
   };
 
@@ -80,6 +81,7 @@ function FormLogin({ children }) {
             Iniciar sesión
           </button>
         </div>
+          <p>{errorlogin}</p>
       </form>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { modoContext } from "../Context/modoContext";
 import { Link } from "react-router-dom";
 import CartIcon from "./general/CartIcon"
+import Sesion from "./NavBar/Sesion";
 function Navbar({ children }) {
   const { modo, cambiar, claseModo , userCredential } = useContext(modoContext);
   
@@ -27,13 +28,8 @@ function Navbar({ children }) {
                     <button className="btn" onClick={cambiar}>
                       {modo}
                     </button>
-                    <div className="flex flex-col items-center">
-                      <span className="text-sm font-semibold">👤</span>
-                      <span className="text-sm font-semibold">
-                      {login ? (login.user.email) : ('anonimo') }
-                      </span>
-                      
-                    </div>
+                    <Sesion/>
+
                   </div>
 
                   <div className="hidden md:block">

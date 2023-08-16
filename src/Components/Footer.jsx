@@ -9,7 +9,7 @@ function Footer() {
 
     <div className={claseModo}>
 
-      <p className=' text-center p-1'>Todos los derechos reservados © {new Date().getFullYear()}</p>
+      <p className=' text-center p-1'>Todos los derechos reservados © {new Date().getFullYear()} <i className="fa-brands fa-instagram"></i></p>
       
       </div>
     </div>

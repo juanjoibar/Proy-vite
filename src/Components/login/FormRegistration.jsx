@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from "react-router-dom"
+import  {createUserWithEmailAndPassword,updateProfile} from 'firebase/auth'
+import {auth} from '../../config/firebase'
 const FormRegistration = () => {
+  const navigate = useNavigate()
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
+    try {
     e.preventDefault();
     // Aquí puedes agregar la lógica para procesar el registro, por ejemplo, enviar los datos a un servidor.
     console.log('Nombre:', firstName);
@@ -21,6 +25,23 @@ const FormRegistration = () => {
     setEmail('');
     setPassword('');
     setConfirmPassword('');
+    
+     
+        const userCredential = await createUserWithEmailAndPassword(auth,email, password);
+  
+        // Actualizar el perfil del usuario con nombre y apellido
+        await updateProfile( auth.currentUser,{
+          displayName: `${firstName} ${lastName}`,
+        });
+  
+        console.log('Usuario registrado:', userCredential.user);
+        navigate("/login");
+      } catch (error) {
+        console.error('Error al registrar el usuario:', error);
+      }
+  
+      
+  
   };
 
   return (

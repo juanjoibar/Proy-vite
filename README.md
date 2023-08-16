@@ -14,16 +14,20 @@
 7. Crear login.
 8. formulario de registro.
 9. Localhost para el modo claro/oscuro
+10. check out del carrito.
+11. usar firebase para el login.
+12. Usar localhost para el checkout.
+13. LogOut.
+14. Registrarse con firebase.
 
 ##Falta 
 1. traer lista de productos resposive casi 
 2. mejorar el carousel
 3. buscar buena api y enmarcar fotos de productos casi pero no pagina
-4. usar firebase para el login.
-5. check out del carrito.
-6. usar localhost para el checkout. 
-7. armar pago con pago con mercadolibre si es posible. 
-8. Al seleccionar el produccto ver mas detalles. 
+4. armar pago con pago con mercadolibre si es posible. 
+5. Al seleccionar el produccto ver mas detalles.
+7. Sass (aplicar variables, anidamiento, )
+8.  
 
 
 
@@ -31,4 +35,4 @@
 
 *
 ##sitio
-Link [Sitio en desarrollo](pescaenlinea.netlify.app) 
+* [Sitio en desarrollo](pescaenlinea.netlify.app) 
